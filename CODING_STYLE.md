@@ -22,9 +22,9 @@ I opted to place opening braces on a new line:
  {
     //content
  }
- 
- instead
-
+ ```
+ instead of
+```c
  if content {
     //content
  }
