@@ -1,37 +1,41 @@
 #include <stdio.h>
-// Parte obrigatória do código em C
+// Mandatory part of a C program, responsible for input and output of data.
 int main() {
-    //int = inteiro e main = variavel principal do programa
-    //(int main(){conteudo do escopo main})
+    //int = integer and main = principal variable of the program.
+    //(int main(){content of the main scope})
 printf("************************************\n");
-printf("*Bem Vindo ao jogo!! Vamos começar?*\n");
+printf("*WELCOME TO THE GUESSING GAME!! LET'S GET STARTED?*\n");
 printf("************************************\n");
 
-int numerosecreto;
-    numerosecreto = 40;
-// variavel >>numerosecreto<< recebe o valor 40, que é o valor principal da seção.
+int secretnumber = 40;
+    secretnumber = 40;
+// variable >>secretnumber<< that receives the value 40, which is the >secret number< to be guessed by the user. 
 
-int chute;
-//variavel >>chute<< que recebe o valor pela função >>scanf()<<, responsavel pela entrada e saida de dados.
-//a variavel >>chute<< é comparada com a variavel >>numerosecreto<<.
-for (int i = 1; i <= 3; i++) {
-printf("Qual é o seu %do. chute?", i);
-scanf("%d", &chute); //função >>scanf()<< que recebe o valor digitado pelo usuario. //%d é o dado que será recebido, no caso um número inteiro.
-printf("Seu %do. chute foi %d!\n", i, chute);
+int guess;
+//variable >>guess<< that receives the value through the >>scanf()<< function, responsible for input and output of data.
+//the variable >>guess<< is compared with the variable >>secretnumber<<.
+for (int i = 1; i <= 3; i++) { // i = repetition control, which goes from 1 to 3, that is, the user has 3 chances to guess the secret number.
+printf("What is your %dth guess?", i);
+scanf("%d", &guess); 
+//function >>scanf()<< that receives the value typed by the user. 
+//%d is the data that will be received, in this case an integer.
+printf("Your %dth guess was %d!\n", i, guess);
+//return the value typed by the user, which is stored in the variable >>guess<<.
 
-
-int acertou = chute == numerosecreto;
-    if (acertou) {
-        printf("Parabens, Você acertou\n");
-        break;
+int correct = guess == secretnumber;
+    if (correct) {
+        printf("Congratulations, You guessed correctly!\n");
+        break; // stop the loop >>if<< the user guesses correctly.
         } else {
-            int maior = chute > numerosecreto;
-            if(maior) {
-            printf("Você chutou um número maior que o número secreto\n");
+            int larger = guess > secretnumber;
+            if(larger) {
+            printf("You guessed a number GREATER than the secret number\n");
+            // return the message that the user guessed a number greater than the secret number.
             } else {
-            printf("Você chutou um número menor que o número secreto\n");
+            printf("You guessed a number LESS than the secret number\n");
+            // return the message that the user guessed a number less than the secret number.
             }
         }
     }
-printf("Fim de jogo!\n");
+printf("End of game! Thanks for playing!\n");
 }
