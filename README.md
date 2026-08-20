@@ -15,3 +15,7 @@ This project will be continuously improved and expanded as I learn more about th
 Migrated the code from Portuguese to English for better readability and consistency.
 
 Encountered Git and VS Code commit errors caused by using Git through WSL, which resulted in a conflict between the local and remote README files.
+
+## Documentation
+
+- [C Coding Style](coding_style.md)
