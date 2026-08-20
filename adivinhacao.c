@@ -17,7 +17,7 @@ int main()
     // variable > secretnumber<< that receives the value 40, which is the >secret number< to be guessed by the user. 
 
     int guess;
-          ^
+
     //variable >>guess<< that receives the value through the >>scanf()<< function, responsible for input and output of data.
     //the variable >>guess<< is compared with the variable > secretnumber<<.
 
