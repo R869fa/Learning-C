@@ -17,7 +17,7 @@
 ## Formatting
 
 I opted to place opening braces on a new line:
-
+```c
  if content 
  {
     //content
@@ -28,3 +28,4 @@ I opted to place opening braces on a new line:
  if content {
     //content
  }
+```
