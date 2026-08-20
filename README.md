@@ -18,4 +18,4 @@ Encountered Git and VS Code commit errors caused by using Git through WSL, which
 
 ## Documentation
 
-- [C Coding Style](coding_style.md)
+- [C Coding Style](CODING_STYLE.md)
