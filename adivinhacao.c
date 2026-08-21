@@ -12,7 +12,6 @@ int main()
     printf("************************************\n");
 
     int secretnumber = 40;
-        secretnumber = 40;
         
     // variable > secretnumber<< that receives the value 40, which is the >secret number< to be guessed by the user. 
 
@@ -36,24 +35,21 @@ int main()
         //return the value typed by the user, which is stored in the variable >>guess<<.
 
         int correct = guess == secretnumber;
+        int larger = guess > secretnumber;
+
         if (correct)
         {
             printf("Congratulations, You guessed correctly!\n");
             break; // stop the loop >>if<< the user guesses correctly.
         }
+        else if(larger)
+            // else if checks if the guess is larger than the secret number.
+        {
+            printf("Your guess is LARGER than the secret number!\n");
+        }
         else
         {
-            int larger = guess > secretnumber;
-            if (larger)
-            {
-                printf("You guessed a number GREATER than the secret number\n");
-                // return the message that the user guessed a number greater than the secret number.
-            }
-            else
-            {
-                printf("You guessed a number LESS than the secret number\n");
-                // return the message that the user guessed a number less than the secret number.
-            }
+            printf("Your guess is SMALLER than the secret number!\n");
         }
     }
     printf("End of game! Thanks for playing!\n");
